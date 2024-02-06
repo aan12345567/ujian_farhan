@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Petugas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #007bff;
+            overflow: hidden;
+        }
+        li {
+            float: left;
+        }
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        li a:hover {
+            background-color: #0056b3;
+        }
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+        }
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="dashboard_admin.php">Data Pembelian</a></li>
+        <li><a href="pendataan_barang.html">Pendataan Barang</a></li>
+        <li><a href="stok_barang.php">Stok Barang</a></li>
+        <li><a href="register_petugas.html">Register Petugas</a></li>
+        <li><a href="logout.php">Logout</a></li>
+    </ul>
+    
+    <h2>Register Petugas</h2>
+    <form action="register_petugas.php" method="post">
+        <label for="nama">Nama Lengkap:</label>
+        <input type="text" name="nama" id="nama" required>
+
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required>
+
+        <input type="hidden" name="level" id="level" value="petugas">
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
